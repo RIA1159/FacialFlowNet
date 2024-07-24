@@ -4,44 +4,25 @@ Official release of FacialFlowNet: Advancing Facial Optical Flow Estimation with
 
 Coming soon ......
 
-
-- `project-root/`
-  - `README.md`
-  - `src/`
-    - `main.py`
-    - `utils.py`
-    - `data/`
-      - `data.csv`
-      - `data.json`
-  - `docs/`
-    - `index.md`
-    - `api.md`
-  - `tests/`
-    - `test_main.py`
-    - `test_utils.py`
-
-
-- `FacialFlowNet/`
-  - `image/`
-    -`facial/`
-      -`train/`
-      -`test/`
-      -`val/`
-    -`head/`
-      -`train/`
-      -`test/`
-      -`val/`
-  -`flow/`
-    -`facial/`
-      -`train/`
-      -`test/`
-      -`val/`
-    -`head/`
-      -`train/`
-      -`test/`
-      -`val/`
-  -`mask/`
-    -`train/`
-    -`test/`
-    -`val/`
-
+## FacialFlowNet Dataset
+![FlowPipeline](./assets/flowpipeline.png)
+Download the dataset zip file and extract the files to the following path:
+```Shell
+├── FacialFlowNet
+    ├── image
+        ├── facial
+            ├── train 
+            ├── test 
+            ├── val
+        ├── head
+            ├── ...
+    ├── flow
+        ├── facial
+            ├── train 
+            ├── test 
+            ├── val
+        ├── head
+            ├── ...
+    ├── mask
+        ├── ...
+```
