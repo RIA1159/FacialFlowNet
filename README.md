@@ -5,6 +5,21 @@ Official release of FacialFlowNet: Advancing Facial Optical Flow Estimation with
 Coming soon ......
 
 
+- `project-root/`
+  - `README.md`
+  - `src/`
+    - `main.py`
+    - `utils.py`
+    - `data/`
+      - `data.csv`
+      - `data.json`
+  - `docs/`
+    - `index.md`
+    - `api.md`
+  - `tests/`
+    - `test_main.py`
+    - `test_utils.py`
+
 
 - `FacialFlowNet/`
   - `image/`
