@@ -3,3 +3,30 @@ Official release of FacialFlowNet: Advancing Facial Optical Flow Estimation with
 
 
 Coming soon ......
+
+
+
+- `FacialFlowNet/`
+  - `image/`
+    -`facial/`
+      -`train/`
+      -`test/`
+      -`val/`
+    -`head/`
+      -`train/`
+      -`test/`
+      -`val/`
+  -`flow/`
+    -`facial/`
+      -`train/`
+      -`test/`
+      -`val/`
+    -`head/`
+      -`train/`
+      -`test/`
+      -`val/`
+  -`mask/`
+    -`train/`
+    -`test/`
+    -`val/`
+
