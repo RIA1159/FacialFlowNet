@@ -1,7 +1,7 @@
 <!--
  * @Date: 2024-07-24 14:27:51
  * @LastEditors: ljz 
- * @LastEditTime: 2024-11-04 11:02:08
+ * @LastEditTime: 2024-11-04 11:03:35
  * @FilePath: \X-Gaussiand:\desktop\study\FacialFlowNet\README.md
  * @Description: 
  * 
@@ -22,7 +22,7 @@ Coming soon ......
 
 ## FacialFlowNet Dataset
 ![FlowPipeline](./assets/flowpipeline.png)
-You can download the FacialFlowNet dataset from [here](https://pan.baidu.com/s/1qNSZ_5hjIr3_5srxaavR7w) with the extraction code `jjm3`, and extract the compressed file to the following path:
+You can download the FacialFlowNet dataset from [here](https://pan.baidu.com/s/1u9fQsGdqhjqDN6jVhXxNrA) with the extraction code `c2z2`, and extract the compressed file to the following path:
 ```Shell
 ├── FacialFlowNet
     ├── image
@@ -50,6 +50,7 @@ Parts of code are adapted from the following repositories. We thank the authors 
 * [DAD-3DHeads](https://github.com/PinataFarms/DAD-3DHeads)
 
 ## Citation
+If you use the FacialFlowNet Dataset and/or DecFlow - implicitly or explicitly - for your research projects, please cite the following paper:
 ```Shell
 @inproceedings{lu2024facialflownet,
   title={FacialFlowNet: Advancing Facial Optical Flow Estimation with a Diverse Dataset and a Decomposed Model},
