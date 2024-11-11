@@ -1,23 +1,49 @@
 <!--
  * @Date: 2024-07-24 14:27:51
  * @LastEditors: ljz 
- * @LastEditTime: 2024-11-04 11:03:35
- * @FilePath: \X-Gaussiand:\desktop\study\FacialFlowNet\README.md
+ * @LastEditTime: 2024-11-11 14:27:51
+ * @FilePath: \FacialFlowNet\README.md
  * @Description: 
  * 
  * Copyright (c) 2024 by Fudan University/Shanghai Key Laboratory of Intelligent Information Processing, All Rights Reserved. 
 -->
+
 # FacialFlowNet
-Official release of FacialFlowNet: Advancing Facial Optical Flow Estimation with a Diverse Dataset and a Decomposed Model (ACMMM2024)
+Official release of FacialFlowNet: 
+[Advancing Facial Optical Flow Estimation with a Diverse Dataset and a Decomposed Model](https://dl.acm.org/doi/10.1145/3664647.3680921)
+ACMMM2024
+Jianzhi Lu, Ruian He, Shili Zhou, Weimin Tan, Bo Yan
+Fudan, Shanghai, China
 
 ## DecFlow
 ![DecFlow](./assets/decflow.png)
+### Environments
+You will have to choose cudatoolkit version to match your compute environment. The code is tested on PyTorch 1.10.0 and cuda 11.8, but other versions might also work.
 ```Shell
+conda create --name decflow python==3.8
+conda activate decflow
+pip install torch==1.10.0+cu113 torchvision==0.11.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
+pip install -r requirements.txt
+
 ```
-Coming soon ......
 
-## Demos
+### Demos
+```Shell
+python get_flow.py
+```
 
+### Train
+```Shell
+# stage1 train both flow heads
+python train.py --name decflow-facialflownet-part1 --stage facialflow --validation facialflow --output checkpoints --restore_ckpt checkpoints/gma-sintel.pth  --num_steps 10000 --lr 0.000125 --image_size 480 480 --wdecay 0.00001 --gamma 0.85 --gpus 0 --batch_size 6 --val_freq 1000 --print_freq 100 --mixed_precision
+# stage2 frozen facialflow head and train headflow head
+python train.py --name decflow --stage facialflow --validation facialflow  --output checkpoints --restore_ckpt checkpoints/decflow-facialflownet-part1.pth  --num_steps 10000 --lr 0.000125 --image_size 480 480 --wdecay 0.00001 --gamma 0.85 --gpus 0 --batch_size 6 --val_freq 1000 --print_freq 100 --mixed_precision --frozen
+```
+
+### Evaluate
+```Shell
+python evaluate.py --model ./checkpoints/decflow-facialflownet.pth --dataset facialflow
+```
 
 
 ## FacialFlowNet Dataset
@@ -42,6 +68,8 @@ You can download the FacialFlowNet dataset from [here](https://pan.baidu.com/s/1
     ├── mask
         ├── ...
 ```
+
+
 
 ## Acknowledgement
 Parts of code are adapted from the following repositories. We thank the authors for their great contribution to the community:
