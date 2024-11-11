@@ -1,8 +1,8 @@
 <!--
  * @Date: 2024-07-24 14:27:51
  * @LastEditors: ljz 
- * @LastEditTime: 2024-11-11 14:34:47
- * @FilePath: \lab2d:\desktop\study\FacialFlowNet\README.md
+ * @LastEditTime: 2024-11-11 14:38:28
+ * @FilePath: \FacialFlowNet\README.md
  * @Description: 
  * 
  * Copyright (c) 2024 by Fudan University/Shanghai Key Laboratory of Intelligent Information Processing, All Rights Reserved. 
@@ -11,8 +11,12 @@
 # FacialFlowNet
 Official release of FacialFlowNet: 
 [Advancing Facial Optical Flow Estimation with a Diverse Dataset and a Decomposed Model](https://dl.acm.org/doi/10.1145/3664647.3680921)
-ACMMM2024.
-Jianzhi Lu, Ruian He, Shili Zhou, Weimin Tan, Bo Yan. Fudan, Shanghai, China.
+
+ACMMM2024  
+
+Jianzhi Lu, Ruian He, Shili Zhou, Weimin Tan, Bo Yan  
+
+Fudan, Shanghai, China  
 
 ## DecFlow
 ![DecFlow](./assets/decflow.png)
