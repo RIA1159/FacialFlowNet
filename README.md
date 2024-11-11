@@ -34,9 +34,9 @@ python get_flow.py
 
 ### Train
 ```Shell
-# stage1 train both flow heads
+# stage1 train both flow decoder heads
 python train.py --name decflow-facialflownet-part1 --stage facialflow --validation facialflow --output checkpoints --restore_ckpt checkpoints/gma-sintel.pth  --num_steps 10000 --lr 0.000125 --image_size 480 480 --wdecay 0.00001 --gamma 0.85 --gpus 0 --batch_size 6 --val_freq 1000 --print_freq 100 --mixed_precision
-# stage2 frozen facialflow head and train headflow head
+# stage2 frozen facialflow decoder and train headflow decoder
 python train.py --name decflow --stage facialflow --validation facialflow  --output checkpoints --restore_ckpt checkpoints/decflow-facialflownet-part1.pth  --num_steps 10000 --lr 0.000125 --image_size 480 480 --wdecay 0.00001 --gamma 0.85 --gpus 0 --batch_size 6 --val_freq 1000 --print_freq 100 --mixed_precision --frozen
 ```
 
